@@ -15,6 +15,7 @@ public class List {
     public List() {
         first = null;
         size = 0;
+        
     }
 
     /** Returns the number of elements in this list. */

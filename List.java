@@ -29,15 +29,21 @@ public class List {
 
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
     public void addFirst(char chr) {
+
         Node temp = new Node(new CharData(chr), first);
+
         this.first = temp;
+
         size++;
     }
     
     /** GIVE Textual representation of this list. */
     public String toString() {
+
         String result = "(";
+
         for (int i = 0; i < size; i++) {
+
             result += this.listIterator(i).current + " ";
         }
         return result.substring(0,result.length() - 1) + ")";
@@ -51,9 +57,12 @@ public class List {
         int index = 0;
 
         while (temp != null){
+
             if (temp.cp.equals(chr)){
+
                 return index;
             }
+
             temp = temp.next;
             index++;
         }
@@ -64,8 +73,11 @@ public class List {
      *  increments its counter. Otherwise, adds a new CharData object with the
      *  given chr to the beginning of this list. */
     public void update(char chr) {
+        
         int temp = indexOf(chr);
+
         if (temp != -1) get(temp).count++;
+
         else addFirst(chr);
     }
 
@@ -93,9 +105,15 @@ public class List {
      *  If the index is negative or is greater than the size of this list, 
      *  throws an IndexOutOfBoundsException. */
     public CharData get(int index) {
-        if (index >= size || index < 0) throw new IndexOutOfBoundsException();
+        if (index >= size || index < 0) 
+            throw new IndexOutOfBoundsException();
+
         Node temp = this.first;
-        for (int i = 0; i<index;i++) temp = temp.next;
+
+        for (int i = 0; i < index; i++)
+        {
+             temp = temp.next;
+        }
         return temp.cp;
 
     }
@@ -103,10 +121,14 @@ public class List {
     /** Returns an array of CharData objects, containing all the CharData objects in this list. */
     public CharData[] toArray() {
 	    CharData[] arr = new CharData[size];
+
 	    Node current = first;
+
 	    int i = 0;
+
         while (current != null) {
-    	    arr[i++]  = current.cp;
+    	   
+            arr[i++]  = current.cp;
     	    current = current.next;
         }
         return arr;

@@ -138,7 +138,7 @@ public class LanguageModel {
 
     public static void main(String[] args) {
        
-        int windowLength = Integer.parseInt(args[0]);
+      /*  int windowLength = Integer.parseInt(args[0]);
         String initialText = args[1];
         int generatedTextLength = Integer.parseInt(args[2]);
         Boolean randomGeneration = args[3].equals("random");
@@ -154,4 +154,6 @@ public class LanguageModel {
 
         System.out.println(lm.generate(initialText, generatedTextLength));
     }
+
+    */
 }

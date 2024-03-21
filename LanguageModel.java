@@ -152,8 +152,8 @@ public class LanguageModel {
 
         lm.train(fileName);
 
-        System.out.println(lm.generate(initialText, generatedTextLength));
+        System.out.println(lm.generate(initialText, generatedTextLength)); */
     }
 
-    */
+   
 }
